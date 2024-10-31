@@ -1,1 +1,1 @@
-# 30-Day-SOC-MyDFIR-Challenge-
+30-Days SOC Challenge
