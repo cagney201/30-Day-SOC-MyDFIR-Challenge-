@@ -9,7 +9,7 @@ Day 1: Network Architecture Design for SOC Environment
 
 Network Architecture Details
 
-The SOC environment comprises six servers, each serving distinct purposes, all hosted on Vultr’s cloud infrastructure within a Virtual Private Cloud (VPC). An internet gateway allows connection to my ISP.
+The SOC environment comprises six servers, each serving distinct purposes, all hosted on Vultr’s cloud infrastructure within a Virtual Private Cloud (VPC). An internet gateway allows connection to my ISP. I also have a kali attack Workstation hosted on premises on my lab computer at home.
 
 * Elastic & Kibana Server:  Collects and visualizes logs from other systems for real-time monitoring and threat detection
 * Ubuntu Server:  SSH enabled for secure shell access, used for secure administration and task automation
