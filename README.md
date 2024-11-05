@@ -27,10 +27,19 @@ Day 2: Elastic Stack
 
 The Elastic stack known as the ELK stack has three core components that work to ingest, process, store, and visualize our data.
 
-* Elastic Search at its core is a database to store logs such as windows event logs, syslogs, and firewall logs. It provides the capability to search across your data. Elastic search also uses RESTful APIs & JSON. This means you can use various applications to 
+* Elastic Search at its core is a database to store logs such as Windows event logs, syslogs, and firewall logs. It provides the capability to search across your data. Elastic search also uses RESTful APIs & JSON. This means you can use various applications to 
   interact with your elastic search database in a programmable way to retrieve information as required. I will be using Cabana as an alternative.
 
-* Log Stash collects Telemetry from various sources it also transforms filters and outputs it into elastic search instances. As a side note when collecting Telemetry, there are many ways to do this with two popular ways being Beats and elastic agents. There are 6 types of 
-  Elastic Beats (Telemetry is the automated process of collecting and transmitting data from remote sources for monitoring and analysis)
+* Log Stash collects Telemetry from various sources it also transforms filters and outputs them into elastic search instances. As a side note when collecting Telemetry, there are many ways to do this with two popular ways being Beats and elastic agents. There are 6 types 
+   of Beats (Telemetry is the automated process of collecting and transmitting data from remote sources for monitoring and analysis)
 
 * Kibana: Serves as the Web Gui, you can quickly search data, Create visualization, create Reports, create alerts, and build dashboards.
+
+
+Day 3-4 Setup Elastic & Kibana Server
+
+* Login to the Vutur website navigate to the network option select VPC 2.0 & use the 172.31.0.0/24 for our private network
+* Deploy a new server using Ubuntu 22.04 with 80 GB with 4 virtual CPUs 16 GB, unselect auto backups & IPv6
+* Server hostname will be MYDFIR-ELK-CAG
+* Deploy now
+  
