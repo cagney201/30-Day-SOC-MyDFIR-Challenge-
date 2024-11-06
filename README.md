@@ -36,10 +36,15 @@ The Elastic stack known as the ELK stack has three core components that work to 
 * Kibana: Serves as the Web Gui, you can quickly search data, Create visualization, create Reports, create alerts, and build dashboards.
 
 
-Day 3-4 Setup Elastic & Kibana Server
+Day 3-4: Setup Elastic & Kibana Server
 
-* Login to the Vutur website navigate to the network option select VPC 2.0 & use the 172.31.0.0/24 for our private network
-* Deploy a new server using Ubuntu 22.04 with 80 GB with 4 virtual CPUs 16 GB, unselect auto backups & IPv6
-* Server hostname will be MYDFIR-ELK-CAG
-* Deploy now
-  
+1. Vultr settings 
+ * Login to the Vutur website navigate to the network option select VPC 2.0 & use the 172.31.0.0/24 for our private network
+ * Deploy a new server using Ubuntu 22.04 with 80 GB with 4 virtual CPUs 16 GB, unselect auto backups & IPv6
+ * Server hostname will be MYDFIR-ELK-CAG
+   Deploy now
+
+2. Installing Elastic Server
+ * open PowerShell and ssh into the server
+ * ```powershell
+   ssh root@169.0.0.1
