@@ -86,6 +86,40 @@ Purpose: We want to restrict access to the Elasticsearch server and prevent it f
    Name the group: 30-Day-MyDFIR-SOC-Challenge-CAG
    <img width="791" alt="Screenshot 2024-11-06 at 5 52 29 PM" src="https://github.com/user-attachments/assets/37255208-471c-4bd1-933a-af2dfcb5c5f4">
 
+Configure Inbound SSH Access
+  
+  * Modify the Inbound IPv4 rules for SSH:
+  * Change the source to My IP to limit SSH access to only your local machine.
+  * Assign the Firewall Group to Your VM
+
+Navigate to the Compute section in your cloud provider's dashboard.
+  * Select your Virtual Machine (VM), then go to Settings.
+  * Under Firewall, assign the newly created 30-Day-MyDFIR-SOC-Challenge-CAG group to the VM.
+
+
+Start and Enable Elasticsearch Services
+   * Reload systemd to apply any changes:
+ ```bash
+ sudo systemctl daemon-reload
+ ```
+
+  * Enable Elasticsearch to start automatically at boot time:
+
+ ```bash
+ sudo systemctl enable elasticsearch.service
+ ```
+
+  *  Start the Elasticsearch service:
+ ```bash
+ sudo systemctl start elasticsearch.service
+ ```
+
+* Check the status of the service to ensure it’s running:
+
+```bash
+sudo systemctl status elasticsearch.service
+```
+
 
 
 
