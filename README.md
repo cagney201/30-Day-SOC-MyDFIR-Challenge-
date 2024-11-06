@@ -45,6 +45,49 @@ Day 3-4: Setup Elastic & Kibana Server
    Deploy now
 
 2. Installing Elastic Server
- * open PowerShell and ssh into the server
- * ```powershell
-   ssh root@169.0.0.1
+ * Open PowerShell and SSH into the server
+
+ * Let's update our repositories with the following command
+ 
+   ```powershell
+   apt-get update && apt-get upgrade –y
+   ```
+
+
+ * log into the elastic website and select deb x86_64 https://www.elastic.co/downloads/elasticsearch right-click the download button and select copy link address
+ * In the terminal type the following command to download the install file to our ELK server:
+   ```powershell
+   wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.3-amd64.deb
+   ```
+ * Next command will now install Elastic:
+   ```powershell
+   dpkg -i elasticsearch-8.15.0-amd64.deb
+   ```
+ 
+ * After installation, check the security auto-configuration details to find the superuser password. Copy and paste this information into a password manager for 
+  safekeeping. If you need to reset the password for the built-in elastic superuser, you can do so by navigating to /usr/share/elasticsearch/bin/
+   
+ 
+3. Network configuration & Firewall settings
+
+   Navigate to the elastic configuration file (elasticsearch.yml) which is located in this directory /etc/elasticsearch/
+   Edit the elasticsearch.yml File
+ 
+ * Open the elasticsearch.yml file using nano.
+ Remove the comment symbol (#) before network.host and replace the value with your server's public IP address.
+ Remove the # before http.port and set it to 9200 to enable HTTP access on the default port.
+
+Set Up a Firewall for Network Security
+
+Purpose: We want to restrict access to the Elasticsearch server and prevent it from being exposed to the entire internet.
+
+ * Go to your Virtual Private Cloud (VPC) settings and create a new firewall rule:
+   Under Firewall settings, select Manage and then Add Firewall Group.
+   Name the group: 30-Day-MyDFIR-SOC-Challenge-CAG
+   <img width="791" alt="Screenshot 2024-11-06 at 5 52 29 PM" src="https://github.com/user-attachments/assets/37255208-471c-4bd1-933a-af2dfcb5c5f4">
+
+
+
+
+
+    
