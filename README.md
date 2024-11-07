@@ -235,8 +235,14 @@ The objective for today is to install elastic agent on windows server and enroll
 
 4. Elastic Agent
 
-   * 
+   *
 
+
+
+![image](https://github.com/user-attachments/assets/2f71ce92-201d-43c1-8683-c35f5906bb28)
+
+
+   
 
 
 
