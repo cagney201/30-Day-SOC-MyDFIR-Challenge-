@@ -217,10 +217,11 @@ The objective for today is to install elastic agent on windows server and enroll
 1. I clicked on "Deploy New Server" and selected the same city as my previous setup. For the operating system, I chose Ubuntu 22.04 and connected the server to the VPC network I had 
    created earlier, using VPC 2.0
 
-2. In the Elastic Management Console, I went to Fleet under Management. Then, I clicked Add Fleet Server and selected Quick Start. For the Host URL, I entered the public IP address of the Fleet Server.
+2. I went to Fleet under Management in the Elastic Management Console. Then, I clicked Add Fleet Server and selected Quick Start. For the Host URL, I entered the public IP address of the Fleet Server.
 
    
 
+![image](https://github.com/user-attachments/assets/5ad3f250-48f6-46da-a4cc-b7f63cb11618)
 
        
          
