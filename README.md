@@ -217,11 +217,29 @@ The objective for today is to install elastic agent on windows server and enroll
 1. I clicked on "Deploy New Server" and selected the same city as my previous setup. For the operating system, I chose Ubuntu 22.04 and connected the server to the VPC network I had 
    created earlier, using VPC 2.0
 
-2. I went to Fleet under Management in the Elastic Management Console. Then, I clicked Add Fleet Server and selected Quick Start. For the Host URL, I entered the public IP address of the Fleet Server.
+2. I went to Fleet under Management in the Elastic Management Console. Then, I clicked Add Fleet Server and selected Quick Start. For the Host URL, I entered the public IP address of 
+   the Fleet Server.
+
+   * Add the public IP address of the fleet server and allow all TCP ports 1-65535 into the Firewall group
+   * On the ELK server allow port number 9200 on the firewall  ufw allow 9200 (elastic search listens on this default port)
 
    
 
 ![image](https://github.com/user-attachments/assets/5ad3f250-48f6-46da-a4cc-b7f63cb11618)
+
+3. SSH into our fleet server & update the repository
+
+   * I copied the installation command for the Elastic Agent and pasted it into the Fleet Server terminal to initiate the installation process. You should see "successfully enrolled  
+     the Elastic Agent".
+
+
+4. Elastic Agent
+
+   * 
+
+
+
+
 
        
          
