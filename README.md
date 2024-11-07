@@ -170,6 +170,56 @@ Day 5 Windows Server 2022 (RDP) install
 ![image](https://github.com/user-attachments/assets/440fa212-dc92-4a0e-acbc-00ab5d9c5851)
 
 
+Day 6 Fleet Server:
+
+
+Elastic Agent
+Definition:
+An Elastic Agent is a unified, lightweight agent that runs on your servers or endpoints (like workstations, cloud instances, etc.) to collect data and send it to Elasticsearch. It’s part of the Elastic Stack, which includes tools like Elasticsearch, Kibana, Beats, and Logstash.
+
+The Elastic Agent simplifies the process of data collection. Instead of managing multiple agents for different types of data (e.g., one for logs, one for metrics, one for security), the Elastic Agent combines all of these into a single, unified agent.
+
+Key Features:
+Unified agent: Collects logs, metrics, security data, and more.
+Centralized management: Elastic Agents can be centrally managed through Kibana, making it easier to deploy and configure.
+Flexible and scalable: Works across various environments (on-prem, cloud, hybrid).
+
+Fleet Server
+
+Definition:
+  A Fleet Server acts as the central management hub for Elastic Agents. It communicates with Elastic Agents, giving them configuration instructions and receiving the data they 
+  collect. Fleet Server runs within your Elastic Stack environment and helps manage large numbers of Elastic Agents, providing a central point for their coordination and control.
+
+Fleet Server is responsible for:
+
+ * Enrolling Elastic Agents into your Fleet management system.
+ * Pushing configurations to Elastic Agents.
+ * Ensuring Elastic Agents are properly sending their data to Elasticsearch or Logstash.
+ * Centralizing monitoring and management.
+
+
+Analogy:
+Imagine you're managing a fleet of delivery trucks (Elastic Agents) that carry packages (data) to various destinations (Elasticsearch).
+
+* The Elastic Agents are like the trucks that are physically carrying the packages. Each truck is equipped to handle multiple types of deliveries (logs, metrics, etc.). They travel between different locations (servers/endpoints) to pick up and deliver packages (data).
+
+* The Fleet Server is like the central logistics hub that manages all the trucks. This hub provides the trucks with the necessary instructions, routes, and schedules. It ensures the trucks are loaded with the right packages, sends updates on the routes, and monitors their progress. If any truck breaks down or deviates from its route, the logistics hub can take action to resolve the issue.
+
+In short: Elastic Agent = Delivery truck (data collector)  Fleet Server = Central logistics hub (management and coordination)
+
+
+
+
+Day 7 How to set up Fleet server & Elastic agent:
+
+The objective for today is to install elastic agent on windows server and enroll the windows server into a fleet server
+
+1. I clicked on "Deploy New Server" and selected the same city as my previous setup. For the operating system, I chose Ubuntu 22.04 and connected the server to the VPC network I had 
+   created earlier, using VPC 2.0
+
+2. In the Elastic Management Console, I went to Fleet under Management. Then, I clicked Add Fleet Server and selected Quick Start. For the Host URL, I entered the public IP address of the Fleet Server.
+
+   
 
 
        
