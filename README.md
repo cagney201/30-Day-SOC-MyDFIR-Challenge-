@@ -159,4 +159,24 @@ Kibana Setup
        ufw allow 5601
        ```
 
+
+Day 5 Windows Server 2022 (RDP) install
+
+  I started by deploying a new server, opting for the "Cloud Compute - Shared CPU" configuration. I selected the same data center location as my Elastic server and used the "Windows Standard 2022" image.
+    * To improve security, I updated my network diagram so that both the Windows and Ubuntu servers are positioned outside the Virtual Private Cloud (VPC). This setup creates a layer of protection, ensuring that if either of these servers is compromised, it 
+       won’t expose critical systems like the Fleet Server, Elastic & Kibana, or the OS Ticket system
+
+      
+![image](https://github.com/user-attachments/assets/440fa212-dc92-4a0e-acbc-00ab5d9c5851)
+
+
+
+
+       
+         
+
+
+
+       
+
     
