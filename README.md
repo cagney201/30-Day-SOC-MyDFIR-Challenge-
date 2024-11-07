@@ -256,6 +256,34 @@ The objective for today is to install elastic agent on windows server and enroll
    * I can see my Windows server added as an agent.
 ![image](https://github.com/user-attachments/assets/04dec01a-1d2e-40b1-bb04-e08380e67f21)
 
+
+
+Day 8-9 Sysmom
+
+
+Sysmon, or System Monitor, is a Windows system service and driver that is part of the Sysinternals suite by Microsoft. Sysmon enhances the ability to monitor and log detailed system activity on a Windows machine, which is especially useful for threat detection, security incident response, and forensic investigations.
+
+Key Features of Sysmon:
+Process Creation Logging: Logs detailed information about each process that starts on the system, including command line arguments, process IDs, and parent processes.
+Network Connections: Captures details about network connections made by monitored processes, including source and destination IP addresses and ports.
+File Creation: Monitors and logs the creation of files, tracking changes to files and directories, which helps detect potential malware activity.
+Registry Events: Tracks changes to the Windows Registry, often a key area affected by malware and unauthorized software.
+Hashes: Allows the generation and storage of cryptographic hashes of files for verification and comparison, helping detect unauthorized changes or malicious files.
+Use Cases in Cybersecurity:
+Sysmon is commonly deployed in SOC (Security Operations Center) environments to enhance visibility into system activities, providing critical insights for identifying unusual behavior. By combining Sysmon logs with SIEM (Security Information and Event Management) tools, analysts can detect suspicious patterns like unauthorized logins, process injections, or data exfiltration attempts.
+
+Analogy: Sysmon, short for System Monitor, is a tool developed by Microsoft that's like a security camera for your computer's activities. Imagine having a camera that records everything happening in your house, like who comes in, who goes out, and what they do while they're inside. Sysmon does something similar but for your computer. 
+ 
+It keeps track of all sorts of activities, such as: 
+ 
+Programs Running: It records which programs start and stop, which is like knowing who enters and exits your house. 
+File Changes: It watches if any files are created, modified, or deleted, similar to keeping an eye on what's being moved or changed inside your home. 
+Network Connections: It logs when your computer connects to the internet or other devices, kind of like noting who makes a phone call and to whom 
+
+
+
+
+
      
      
 
