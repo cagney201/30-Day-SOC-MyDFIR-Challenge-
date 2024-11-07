@@ -77,6 +77,10 @@ Day 3-4: Setup Elastic & Kibana Server
  Remove the comment symbol (#) before network.host and replace the value with your server's public IP address.
  Remove the # before http.port and set it to 9200 to enable HTTP access on the default port.
 
+![image](https://github.com/user-attachments/assets/9ebdf921-6f9e-4ef3-a32b-0a294c1792cb)
+
+
+
 Set Up a Firewall for Network Security
 
 Purpose: We want to restrict access to the Elasticsearch server and prevent it from being exposed to the entire internet.
