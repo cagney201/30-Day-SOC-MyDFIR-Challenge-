@@ -236,7 +236,13 @@ The objective for today is to install elastic agent on windows server and enroll
     * For our Elastic agents to communicate to our Fleet server we need to allow port 8220
       ```bash
       ufw allow 8220
-      ``` 
+      ```
+    * Under the Fleet server settings change the host url to port 8220 not 443
+  
+     ![image](https://github.com/user-attachments/assets/259e0a67-b0f3-49c0-8c79-a74c0e9d0fed)
+
+  
+      
      
 
 4. Elastic Agent
