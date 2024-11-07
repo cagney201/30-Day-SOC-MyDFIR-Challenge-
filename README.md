@@ -254,6 +254,9 @@ The objective for today is to install elastic agent on windows server and enroll
    * I ran the installation command for the Elastic Agent and pasted it into the Fleet Server terminal to initiate the installation. I 
      added the --insecure flag at the end of the command since I didn't have a certificate authority. The agent installed successfully.
    * I can see my Windows server added as an agent.
+![image](https://github.com/user-attachments/assets/04dec01a-1d2e-40b1-bb04-e08380e67f21)
+
+     
      
 
 
