@@ -81,7 +81,7 @@ Day 3-4: Setup Elastic & Kibana Server
 
 
 
-Set Up a Firewall for Network Security
+4. Set Up a Firewall for Network Security
 
 Purpose: We want to restrict access to the Elasticsearch server and prevent it from being exposed to the entire internet.
 
@@ -101,7 +101,7 @@ Navigate to the Compute section in your cloud provider's dashboard.
   * Under Firewall, assign the newly created 30-Day-MyDFIR-SOC-Challenge-CAG group to the VM.
 
 
-Start and Enable Elasticsearch Services
+5. Start and Enable Elasticsearch Services
    * Reload systemd to apply any changes:
  ```bash
  sudo systemctl daemon-reload
@@ -127,7 +127,36 @@ sudo systemctl status elasticsearch.service
 ![Elasticsearch service status](https://github.com/user-attachments/assets/613b46a1-7ec3-46ac-8237-8cca4c59b1f1)
 
 
+Kibana Setup
+
+1. Download Kibana: https://www.elastic.co/downloads/kibana select DEBx86_64 and right click on the download button field and choose the copy link address
+
+2. Kibana Configuration: After downloading Kibana we need to edit the configuration file like Elastic. nano /etc/kibana/kibana.yml
+    
+    * Server Port: Default port for Kibana (5601)
+    * Server Host: is set to the public IP address of my server
+
+  * I restarted my Kibana Service and made sure it was active:
+
+    ![Kibana service status](https://github.com/user-attachments/assets/c8aff831-a63a-4e25-87ab-36fa0ab62760)
 
 
+
+3. Enrollment Token: To connect Kibana to Elasticsearch I need to create an enrollment token.
+
+    * Navigate to the bin directory of Elastic
+      ```bash
+      cd /usr/share/elasticsearch/bin
+      ```
+    * To generate a token use the following command:
+      ```bash
+      ./elasticsearch-create-enrollment-token --scope kibana
+      ```
+
+4. I had issues connecting to Kibana in my web browser, so I had to edit my firewall settings and allow any TCP ports from 1-65535 from my SOC analyst laptop
+     * I also needed to allow port 5601 on my ELK server as well by running this command
+       ```bash
+       ufw allow 5601
+       ```
 
     
