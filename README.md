@@ -229,13 +229,20 @@ The objective for today is to install elastic agent on windows server and enroll
 
 3. SSH into our fleet server & update the repository
 
-   * I copied the installation command for the Elastic Agent and pasted it into the Fleet Server terminal to initiate the installation process. You should see "successfully enrolled  
+   * I copied the installation command for the Elastic Agent and pasted it into the Fleet Server terminal to initiate the installation 
+     process. You should see "successfully enrolled  
      the Elastic Agent".
 
+    * For our Elastic agents to communicate to our Fleet server we need to allow port 8220
+      ```bash
+      ufw allow 8220
+      ``` 
+     
 
 4. Elastic Agent
 
-   *
+   * I created a policy called Fleet Server Policy and copied the Windows installation command to use later on the Windows Server.
+   * 
 
 
 
