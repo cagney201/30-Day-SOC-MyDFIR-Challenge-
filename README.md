@@ -272,14 +272,14 @@ Hashes: Allows the generation and storage of cryptographic hashes of files for v
 Use Cases in Cybersecurity:
 Sysmon is commonly deployed in SOC (Security Operations Center) environments to enhance visibility into system activities, providing critical insights for identifying unusual behavior. By combining Sysmon logs with SIEM (Security Information and Event Management) tools, analysts can detect suspicious patterns like unauthorized logins, process injections, or data exfiltration attempts.
 
-Analogy: Sysmon, short for System Monitor, is a tool developed by Microsoft that's like a security camera for your computer's activities. Imagine having a camera that records everything happening in your house, like who comes in, who goes out, and what they do while they're inside. Sysmon does something similar but for your computer. 
- 
-It keeps track of all sorts of activities, such as: 
- 
-Programs Running: It records which programs start and stop, which is like knowing who enters and exits your house. 
-File Changes: It watches if any files are created, modified, or deleted, similar to keeping an eye on what's being moved or changed inside your home. 
-Network Connections: It logs when your computer connects to the internet or other devices, kind of like noting who makes a phone call and to whom 
 
+Additional Sysmon Event Types:
+
+- **Event ID 6**: Monitors driver loading, which helps detect potentially malicious drivers that might be loaded onto the system.
+- **Event ID 7**: Logs image loading, showing the libraries and DLLs that processes are loading, which aids in tracking potential malware components.
+- **Event ID 8**: Detects remote thread creation, a method often used in malicious code injection attacks, signaling possible unauthorized code execution.
+- **Event ID 10**: Monitors process access, logging when one process interacts with another—often an indicator of malicious activity like privilege escalation.
+- **Event ID 22**: Captures DNS queries, providing insight into unusual domain lookups that may indicate command-and-control (C2) activity, useful for detecting malware or phishing-related threats.
 
 
 
