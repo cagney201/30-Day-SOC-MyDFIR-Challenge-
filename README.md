@@ -248,7 +248,8 @@ The objective for today is to install elastic agent on windows server and enroll
 4. Elastic Agent
 
    * I created a policy called Fleet Server Policy and copied the Windows installation command to use later on the Windows Server.
-   * 
+   * I ran the installation command for the Elastic Agent and pasted it into the Fleet Server terminal to initiate the installation. I 
+     added the --insecure flag at the end of the command since I didn't have a certificate authority. The agent installed successfully.
 
 
 
