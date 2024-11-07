@@ -120,6 +120,8 @@ Start and Enable Elasticsearch Services
 sudo systemctl status elasticsearch.service
 ```
 
+![Elasticsearch service status](https://github.com/user-attachments/assets/613b46a1-7ec3-46ac-8237-8cca4c59b1f1)
+
 
 
 
