@@ -280,6 +280,47 @@ Additional Sysmon Event Types:
 - **Event ID 8**: Detects remote thread creation, a method often used in malicious code injection attacks, signaling possible unauthorized code execution.
 - **Event ID 10**: Monitors process access, logging when one process interacts with another—often an indicator of malicious activity like privilege escalation.
 - **Event ID 22**: Captures DNS queries, providing insight into unusual domain lookups that may indicate command-and-control (C2) activity, useful for detecting malware or phishing-related threats.
+- 
+
+
+**Sysmon Installation**
+
+* RDP into my Windows server MYDFIR-WIN-CAG
+* Download https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon & extract the zip file
+* We will be using a popular Sysmon configuration file from the repository from Github https://raw.githubusercontent.com/olafhartong/sysmon-modular/refs/heads/master/sysmonconfig.xml
+* Save the raw xml file and place it in the Sysmon folder
+  ![image](https://github.com/user-attachments/assets/9135da08-7e59-41dd-af25-f2feb382d666)
+
+* Open up PowerShell and copy and paste the sysmon file location & paste it in the terminal & run the following commands
+
+```bash
+.\Sysmon64.exe
+.\Sysmon64.exe -i sysmonconfig.xml
+```
+
+* Veryfiy the sysmon ***services*** are running and the sysmon logs are being generated ***event viewer*** 
+  
+![image](https://github.com/user-attachments/assets/a0cefc4f-4927-493b-a9fe-eef51615558e)
+
+
+Day 10 Ingesting Data with ElasticSearch
+
+
+ * I navigated to the Elasticsearch homepage and clicked on "Add integrations."
+ * Select ***Custom Windows Event Logs***
+ * For the channel name I entered ***Microsoft-Windows_sysmon/Operational*** Which is found by opening Windows Server EventViewer, navigating to Sysmon, and right-clicking on Operational properties.
+
+
+https://github.com/user-attachments/assets/69be5579-a4b0-46b8-b359-5f196f535b6f
+
+
+![Sysmon path](https://github.com/user-attachments/assets/8ce787a5-aec9-405f-89bf-ba1589c21a35)
+
+
+
+
+  
+
 
 
 
