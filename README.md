@@ -1,6 +1,6 @@
 30-Days SOC Challenge
 
-Day 1: Network Architecture Design for SOC Environment
+**Day 1: Network Architecture Design for SOC Environment**
 
  I designed a network architecture diagram to set up a secure SOC environment for testing and monitoring. Using Draw.io, I created a visual layout that organizes the infrastructure into a cloud-based environment hosted on Vultr, with one on-premise machine for attack simulations.
 
@@ -23,7 +23,7 @@ The SOC environment comprises six servers, each serving distinct purposes, all h
 * Attacker Machine: Location: On-premise desktop setup in my home. Simulates an attacker’s machine to test the SOC’s defenses
 
 
-Day 2: Elastic Stack
+**Day 2: Elastic Stack**
 
 The Elastic stack known as the ELK stack has three core components that work to ingest, process, store, and visualize our data.
 
@@ -36,7 +36,7 @@ The Elastic stack known as the ELK stack has three core components that work to 
 * Kibana: Serves as the Web Gui, you can quickly search data, Create visualization, create Reports, create alerts, and build dashboards.
 
 
-Day 3-4: Setup Elastic & Kibana Server
+**Day 3-4: Setup Elastic & Kibana Server**
 
 1. Vultr settings 
  * Login to the Vutur website navigate to the network option select VPC 2.0 & use the 172.31.0.0/24 for our private network
@@ -98,7 +98,7 @@ Configure Inbound SSH Access
 
 Navigate to the Compute section in your cloud provider's dashboard.
   * Select your Virtual Machine (VM), then go to Settings.
-  * Under Firewall, assign the newly created 30-Day-MyDFIR-SOC-Challenge-CAG group to the VM.
+  * Under the Firewall, assign the newly created 30-Day-MyDFIR-SOC-Challenge-CAG group to the VM.
 
 
 5. Start and Enable Elasticsearch Services
@@ -127,7 +127,7 @@ sudo systemctl status elasticsearch.service
 ![Elasticsearch service status](https://github.com/user-attachments/assets/613b46a1-7ec3-46ac-8237-8cca4c59b1f1)
 
 
-Kibana Setup
+**Kibana Setup**
 
 1. Download Kibana: https://www.elastic.co/downloads/kibana select DEBx86_64 and right click on the download button field and choose the copy link address
 
@@ -160,7 +160,7 @@ Kibana Setup
        ```
 
 
-Day 5 Windows Server 2022 (RDP) install
+**Day 5 Windows Server 2022 (RDP) install**
 
   I started by deploying a new server, opting for the "Cloud Compute - Shared CPU" configuration. I selected the same data center location as my Elastic server and used the "Windows Standard 2022" image.
     * To improve security, I updated my network diagram so that both the Windows and Ubuntu servers are positioned outside the Virtual Private Cloud (VPC). This setup creates a layer of protection, ensuring that if either of these servers is compromised, it 
@@ -170,7 +170,7 @@ Day 5 Windows Server 2022 (RDP) install
 ![image](https://github.com/user-attachments/assets/440fa212-dc92-4a0e-acbc-00ab5d9c5851)
 
 
-Day 6 Fleet Server:
+**Day 6 Fleet Server**
 
 
 Elastic Agent
@@ -210,9 +210,9 @@ In short: Elastic Agent = Delivery truck (data collector)  Fleet Server = Centra
 
 
 
-Day 7 How to set up Fleet server & Elastic agent:
+**Day 7** How to set up Fleet server & Elastic agent:
 
-The objective for today is to install elastic agent on windows server and enroll the windows server into a fleet server
+The objective for today is to install the elastic agent on Windows server and enroll the Windows server into a fleet server
 
 1. I clicked on "Deploy New Server" and selected the same city as my previous setup. For the operating system, I chose Ubuntu 22.04 and connected the server to the VPC network I had 
    created earlier, using VPC 2.0
@@ -237,7 +237,7 @@ The objective for today is to install elastic agent on windows server and enroll
       ```bash
       ufw allow 8220
       ```
-    * Under the Fleet server settings change the host url to port 8220 not 443
+    * Under the Fleet server settings change the host URL to port 8220, not 443
   
      ![image](https://github.com/user-attachments/assets/259e0a67-b0f3-49c0-8c79-a74c0e9d0fed)
 
@@ -247,7 +247,7 @@ The objective for today is to install elastic agent on windows server and enroll
 
 4. Elastic Agent
 
-   * I created a policy called Fleet Server Policy and copied the Windows installation command to use later on the Windows Server.
+   * I created a Fleet Server Policy policy and copied the Windows installation command to use later on the Windows Server.
 
 ![image](https://github.com/user-attachments/assets/2f71ce92-201d-43c1-8683-c35f5906bb28) 
 
@@ -258,19 +258,22 @@ The objective for today is to install elastic agent on windows server and enroll
 
 
 
-Day 8-9 Sysmom
+**Day 8-9 Sysmom**
 
 
 Sysmon, or System Monitor, is a Windows system service and driver that is part of the Sysinternals suite by Microsoft. Sysmon enhances the ability to monitor and log detailed system activity on a Windows machine, which is especially useful for threat detection, security incident response, and forensic investigations.
 
 Key Features of Sysmon:
-Process Creation Logging: Logs detailed information about each process that starts on the system, including command line arguments, process IDs, and parent processes.
+Process Creation Logging: 
+Logs detailed information about each process that starts on the system, including command line arguments, process IDs, and parent processes.
 Network Connections: Captures details about network connections made by monitored processes, including source and destination IP addresses and ports.
 File Creation: Monitors and logs the creation of files, tracking changes to files and directories, which helps detect potential malware activity.
+
 Registry Events: Tracks changes to the Windows Registry, often a key area affected by malware and unauthorized software.
 Hashes: Allows the generation and storage of cryptographic hashes of files for verification and comparison, helping detect unauthorized changes or malicious files.
 Use Cases in Cybersecurity:
-Sysmon is commonly deployed in SOC (Security Operations Center) environments to enhance visibility into system activities, providing critical insights for identifying unusual behavior. By combining Sysmon logs with SIEM (Security Information and Event Management) tools, analysts can detect suspicious patterns like unauthorized logins, process injections, or data exfiltration attempts.
+
+Sysmon is commonly deployed in SOC (Security Operations Center) environments to enhance visibility into system activities and provide critical insights for identifying unusual behavior. By combining Sysmon logs with SIEM (Security Information and Event Management) tools, analysts can detect suspicious patterns like unauthorized logins, process injections, or data exfiltration attempts.
 
 
 Additional Sysmon Event Types:
@@ -280,7 +283,7 @@ Additional Sysmon Event Types:
 - **Event ID 8**: Detects remote thread creation, a method often used in malicious code injection attacks, signaling possible unauthorized code execution.
 - **Event ID 10**: Monitors process access, logging when one process interacts with another—often an indicator of malicious activity like privilege escalation.
 - **Event ID 22**: Captures DNS queries, providing insight into unusual domain lookups that may indicate command-and-control (C2) activity, useful for detecting malware or phishing-related threats.
-- 
+  
 
 
 **Sysmon Installation**
@@ -303,18 +306,51 @@ Additional Sysmon Event Types:
 ![image](https://github.com/user-attachments/assets/a0cefc4f-4927-493b-a9fe-eef51615558e)
 
 
-Day 10 Ingesting Data with ElasticSearch
+**Day 10 Ingesting Data with ElasticSearch**
 
 
  * I navigated to the Elasticsearch homepage and clicked on "Add integrations."
  * Select ***Custom Windows Event Logs***
  * For the channel name I entered ***Microsoft-Windows_sysmon/Operational*** Which is found by opening Windows Server EventViewer, navigating to Sysmon, and right-clicking on Operational properties.
+ * Set up an additional integration specifically for **Windows Defender logs**.
+ * Found the channel name by going to the Event Viewer, selecting Windows Defender, right-clicking Operational, and clicking on Properties
+ * To reduce the number of informational logs, I selected event IDs 116, 117, and 5001. In the advanced settings, I entered these event IDs and added the integration to the policy
+ * Restart the Elastic Agent service on the Windows Server.
+ * After making these configurations, Sysmon logs successfully appeared in Elasticsearch
 
 
-https://github.com/user-attachments/assets/69be5579-a4b0-46b8-b359-5f196f535b6f
 
 
-![Sysmon path](https://github.com/user-attachments/assets/8ce787a5-aec9-405f-89bf-ba1589c21a35)
+![image](https://github.com/user-attachments/assets/c45a109f-452a-4906-a732-23bd85ee13ff)
+
+
+
+![image](https://github.com/user-attachments/assets/7b526651-123d-4afd-a089-8159f55ffb81)
+
+
+
+**Day 11: Brute Force Attack**
+
+
+What is a brute force attack?
+
+A person’s hands are shown typing on a laptop keyboard, overlaid with icons symbolizing various aspects of technology and cybersecurity. These include a central lock symbol, a desktop computer, a mobile device, an email envelope, a speech bubble, and a house with a shield
+FacebookTwitterLinkedInPinterestEmailShare
+Brute force attacks, used by hackers to gain unauthorized access and compromise networks, pose severe risks to companies’ data security. The process begins by selecting a target and then using automated software to test various combinations of passwords or keys. To break it down, these attacks are like a relentless locksmith trying thousands of keys, hoping to find the one that unlocks your front door. They use trial and error to guess or crack an account password, login credentials, and encryption keys.
+
+
+![image](https://github.com/user-attachments/assets/04d595ee-ee6e-4c91-8731-7e5e553a6e24)
+
+
+**Day 12** Ubuntu Server SSH enable installation
+
+  * Deploy New Server
+  * Select **cloud compute-shared CPU**
+  * Ubuntu 24.04 image
+  * SSH from SOC laptop into the new server.
+  * Check the **auth.log files to see if there were any failed login attempts to the server.
+  * 
+
 
 
 
