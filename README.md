@@ -336,20 +336,24 @@ What is a brute force attack?
 
 A person’s hands are shown typing on a laptop keyboard, overlaid with icons symbolizing various aspects of technology and cybersecurity. These include a central lock symbol, a desktop computer, a mobile device, an email envelope, a speech bubble, and a house with a shield
 FacebookTwitterLinkedInPinterestEmailShare
-Brute force attacks, used by hackers to gain unauthorized access and compromise networks, pose severe risks to companies’ data security. The process begins by selecting a target and then using automated software to test various combinations of passwords or keys. To break it down, these attacks are like a relentless locksmith trying thousands of keys, hoping to find the one that unlocks your front door. They use trial and error to guess or crack an account password, login credentials, and encryption keys.
+Brute force attacks, used by hackers to gain unauthorized access and compromise networks, pose severe risks to companies’ data security. The process begins by selecting a target and then using automated software to test various combinations of passwords or keys. To break it down, these attacks are like a relentless locksmith trying thousands of keys, hoping to find the one that unlocks your front door. They use trial and error to guess or crack an account password, login credentials, and encryption keys. Source: https://blog.lumen.com/what-is-a-brute-force-attack/
 
 
 ![image](https://github.com/user-attachments/assets/04d595ee-ee6e-4c91-8731-7e5e553a6e24)
 
 
-**Day 12** Ubuntu Server SSH enable installation
+**Day 12 Ubuntu Server SSH enable installation**
 
   * Deploy New Server
   * Select **cloud compute-shared CPU**
   * Ubuntu 24.04 image
   * SSH from SOC laptop into the new server.
   * Check the **auth.log files to see if there were any failed login attempts to the server.
-  * 
+  * Watch the video below as I show you how I filter out the logs
+
+
+
+**Day 13 Install Elastic Agent on Linux Ubuntu SSH Server**
 
 
 
