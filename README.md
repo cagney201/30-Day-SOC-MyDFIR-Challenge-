@@ -351,7 +351,7 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
   * Check the **auth.log files to see if there were any failed login attempts to the server.
   * Watch the video below as I show you how I filter out the logs
   * To view the failed logins navigate to cd /var/log
-  * cat lauth.log
+  * cat auth.log
   * run command
 
      ```bash
@@ -384,9 +384,9 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
  * Accessed Elastic and navigated to the Discover section.
  * A filter was applied to display results exclusively for the Ubuntu server agent.
  * Added the following fields as columns:
- system.auth.ssh.event
- user.name
- source.ip
+   system.auth.ssh.event
+   user.name
+   source.ip
 
 (The results were refined to show only failed SSH attempts.)
 
