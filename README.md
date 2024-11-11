@@ -350,10 +350,32 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
   * SSH from SOC laptop into the new server.
   * Check the **auth.log files to see if there were any failed login attempts to the server.
   * Watch the video below as I show you how I filter out the logs
+  * To view the failed logins navigate to cd /var/log
+  * cat lauth.log
+  * run command
+
+     ```bash
+    grep -i failed auth.log
+    ```
+    How to filter out to only display the IP addresses of users attempting to use the root command (IP address is the 9th delimiter)
+
+    grep -i failed auth.log | grep -i root | cut -d ' ' -f 9
+
+   ![image](https://github.com/user-attachments/assets/5a3b38b6-1e5c-49b7-a7c4-4eb792bb015f)
 
 
+
+
+    
+   
+   
+    
 
 **Day 13 Install Elastic Agent on Linux Ubuntu SSH Server**
+
+ * I created a Fleet Server policy (MYDFIR-LINUX-POLICY-CAG) for my Ubuntu Server & installed the Elastic agent on it.
+
+   ![image](https://github.com/user-attachments/assets/92e1e1ea-2e58-44a7-b77a-112b0db6606c)
 
 
 
