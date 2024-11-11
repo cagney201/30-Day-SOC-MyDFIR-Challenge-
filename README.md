@@ -405,6 +405,34 @@ Saved this filtered view under the name **SSH Failed Activity**.
    ![image](https://github.com/user-attachments/assets/a838a962-0198-4b29-adc4-34663707b5f5)
 
 
+**Day 15,16,17 Creating Alerts for Windows Server RDP**
+
+ * Began by navigating to Elastic's "Discover" section.
+ * Selected agent.name and applied a filter specific to my Windows Server.
+ * Recognized that failed login attempts are recorded under Event ID 4625, so I added event.code:4625 to the query to focus the results.
+ * Further refined the query by filtering for the source IP address and username, allowing for a more detailed view of activity.
+ * Saved the final query under the name "RDP Failed Activity."
+ * Tested the setup by initiating an RDP login attempt from a virtual machine, which I expected to fail.
+ * Verified that Kibana successfully captured the failed login attempt as anticipated.
+
+
+ * To monitor RDP events, I began by navigating to the "Maps" section in Kibana and entered the following query:
+   (Event code 4625 is failed RDP authentication attempts) 
+
+```bash
+event.code: 4625 and agent.name: MYDFIR-WIN-CAG
+```
+
+
+  * I created a new query that filters out RDP successful attempts with RDP logon types 10 and 7
+
+```bash
+event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonType: 10) and agent.name: MYDFIR-WIN-CAG
+```
+
+
+
+
 
 
 
