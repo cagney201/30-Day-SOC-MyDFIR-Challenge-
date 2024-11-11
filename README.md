@@ -382,8 +382,8 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
 **Day 14: Creating Alerts and Dashboard in Kibana**
 
  * Accessed Elastic and navigated to the Discover section.
-* A filter was applied to display results exclusively for the Ubuntu server agent.
-* Added the following fields as columns:
+ * A filter was applied to display results exclusively for the Ubuntu server agent.
+ * Added the following fields as columns:
  system.auth.ssh.event
  user.name
  source.ip
@@ -393,6 +393,18 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
 Saved this filtered view under the name **SSH Failed Activity**.
 
 ![image](https://github.com/user-attachments/assets/b701b312-76a4-4419-8d78-93a857739914)
+
+ * From this saved query I created a new rule and named it **SSH Brute Force Activity**.
+ * The alert is set to 5 failed login attempts within 5 minutes.
+ * Next I created a map to search for the following:
+   system.auth.ssh.event:* and agent.name:"MYDFIR-Linux-CAG" and system.auth.ssh.event:"Failed"
+ * Saved the visualization
+ *  I duplicated the new map and displayed both failed and accepted attempts.
+
+
+   ![image](https://github.com/user-attachments/assets/a838a962-0198-4b29-adc4-34663707b5f5)
+
+
 
 
 
