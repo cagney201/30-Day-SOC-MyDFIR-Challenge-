@@ -379,6 +379,27 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
 
 
 
+**Day 14: Creating Alerts and Dashboard in Kibana**
+
+ * Accessed Elastic and navigated to the Discover section.
+* A filter was applied to display results exclusively for the Ubuntu server agent.
+* Added the following fields as columns:
+ system.auth.ssh.event
+ user.name
+ source.ip
+
+(The results were refined to show only failed SSH attempts.)
+
+Saved this filtered view under the name **SSH Failed Activity**.
+
+![image](https://github.com/user-attachments/assets/b701b312-76a4-4419-8d78-93a857739914)
+
+
+
+
+
+
+
 
 
   
