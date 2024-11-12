@@ -10,7 +10,7 @@
 ![image](https://github.com/user-attachments/assets/48f2eddb-f650-4c51-bcc7-d2306bce9a39)
 
 
-Network Architecture Details
+**Network Architecture Details**
 
 The SOC environment comprises six servers, each serving distinct purposes, all hosted on Vultr’s cloud infrastructure within a Virtual Private Cloud (VPC). An internet gateway allows connection to my ISP. I also have a kali attack Workstation hosted on-premises on my lab computer at home.
 
