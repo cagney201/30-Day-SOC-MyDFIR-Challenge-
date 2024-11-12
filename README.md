@@ -212,7 +212,7 @@ In short: Elastic Agent = Delivery truck (data collector)  Fleet Server = Centra
 
 **Day 7** How to set up Fleet server & Elastic agent:
 
-The objective for today is to install the elastic agent on Windows server and enroll the Windows server into a fleet server
+The objective for today is to install the elastic agent on the Windows server and enroll the Windows server into a fleet server
 
 1. I clicked on "Deploy New Server" and selected the same city as my previous setup. For the operating system, I chose Ubuntu 22.04 and connected the server to the VPC network I had 
    created earlier, using VPC 2.0
@@ -541,6 +541,12 @@ crowbar -b rdp -u Administrator -C /home/user/mydfir-wordlists-cag.txt -s 45.77.
 * -s 45.77.155.26/32: Defines the target IP address, with /32 notation specifying only that single address.
 
   ![WhatsApp Image 2024-11-12 at 12 39 15_3531cf45](https://github.com/user-attachments/assets/b2834412-cf67-421d-b817-872a29bf795c)
+
+
+* Run this command to RDP into the Windows Server:
+```bash
+xfreerdp /u:Administrator /p:Fa@ll2024$ /v:45.77.155.26:3389
+```
 
 
 
