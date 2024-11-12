@@ -548,6 +548,14 @@ crowbar -b rdp -u Administrator -C /home/user/mydfir-wordlists-cag.txt -s 45.77.
 xfreerdp /u:Administrator /p:Fa@ll2024$ /v:45.77.155.26:3389
 ```
 
+Here is the video link of me executing the command:
+
+
+
+
+
+https://github.com/user-attachments/assets/20048734-4238-48c4-a3c8-1a062444a6ff
+
 
 
 
