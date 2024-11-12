@@ -635,13 +635,39 @@ download C:\Users\Administrator\Documents\passwords.txt
    * It helps in detecting potential malicious files.
 * After locating the relevant event, I:
    * Clicked on the event to view details.
-   * Copied the associated hash for further analysis.      
+   * Copied the associated hash for further analysis. SHA256=5A6616397204BDF630FE5F747DC8C58D6DC2EB0BB02134A55E2DC2A7A2E04419
+   * * As this was a newly generated Mythic agent, no matches were found in **VirusTotal**.    
 
 
 ![image](https://github.com/user-attachments/assets/6b4fac81-63a7-49b0-8aff-18f0a28f6f6f)
 
+* Created a query in Elastic to detect when a process is created (event.code:1) and display the SHA256 hash of the Mythic agent.
 
-*
+  ```bash
+  event.code: 1 and (winlog.event_data.Hashes: *5A6616397204BDF630FE5F747DC8C58D6DC2EB0BB02134A55E2DC2A7A2E04419* OR winlog.event_data.OriginalFileNe : "Apollo.exe")
+  ```
+  * Save the query as **Mythic-Apollo-Process-Create**
+  
+![image](https://github.com/user-attachments/assets/c249ee96-d549-490b-b01b-47c096b8c226)
+
+
+
+
+* To automate the detection, navigate to Security > Rules in Elastic.
+ * Clicked on Detection Rules and selected Create New Rule.
+ * Completed the necessary fields with the following information:
+   
+  ![day 22 3](https://github.com/user-attachments/assets/4552555e-e97d-441e-9c6e-1b7c8310f9c8)
+
+
+* Rule Name: **Mythic C2 Apollo Agent Detected**
+ * Severity: Critical
+ * Frequency: Every 5 minutes with a 5-minute look-back window
+
+
+
+
+
 
 
 
