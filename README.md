@@ -162,10 +162,12 @@ sudo systemctl status elasticsearch.service
 
 **Day 5 Windows Server 2022 (RDP) install**
 
-  I started by deploying a new server, opting for the "Cloud Compute - Shared CPU" configuration. I selected the same data center location as my Elastic server and used the "Windows Standard 2022" image.
-    * To improve security, I updated my network diagram so that both the Windows and Ubuntu servers are positioned outside the Virtual Private Cloud (VPC). This setup creates a layer of protection, ensuring that if either of these servers is compromised, it 
-       won’t expose critical systems like the Fleet Server, Elastic & Kibana, or the OS Ticket system
-
+  * Started by deploying a new server with the "Cloud Compute - Shared CPU" configuration.
+  * Selected the same data center location as my Elastic server.
+  * Choose the "Windows Standard 2022" image for the server.
+  * Enhanced security by updating my network diagram:
+  * Positioned both Windows and Ubuntu servers outside the Virtual Private Cloud (VPC).
+  * This setup adds a layer of protection, ensuring that if either server is compromised, critical systems like the Fleet Server, Elastic & Kibana, and the OS Ticket system remain unaffected.
       
 ![image](https://github.com/user-attachments/assets/440fa212-dc92-4a0e-acbc-00ab5d9c5851)
 
