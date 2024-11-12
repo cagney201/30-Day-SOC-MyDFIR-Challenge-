@@ -439,7 +439,58 @@ event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonT
 
 
 
-https://github.com/user-attachments/assets/d7aeb4fa-f161-4de5-9513-d6a51b7c74ff
+ https://github.com/user-attachments/assets/d7aeb4fa-f161-4de5-9513-d6a51b7c74ff
+
+
+
+
+**Day 18 Command and Control (C2)**
+
+
+In cybersecurity, Command and Control (C2), sometimes written as C&C, refers to a system or infrastructure used by threat actors to remotely control compromised systems within a network. Through C2 channels, attackers can issue commands to infected devices (often called bots or zombies), exfiltrate data, and manage malware. These C2 communications are essential for orchestrating attacks and enabling persistence within the target's environment. C2 servers are typically used in botnet attacks, ransomware campaigns, and advanced persistent threat (APT) operations, allowing attackers to manage and coordinate malicious activities covertly.
+
+
+**Day 19 How to Create an Attack Diagram**
+
+
+
+**Day 20 Mythic Server Setup**
+
+ * On VULTR, I began by deploying a new server, selecting the "Cloud Compute - Shared CPU" option.
+ * For the operating system, I chose Ubuntu 22.04, which is recommended for running Mythic.
+ * I selected a machine with at least 2 CPUs and 4GB of RAM.
+ * Server name: MYDFIR-MYTHIC-CAG
+ * From my Kali Linux I am going to SSH into the Mythic server & update & upgrade the repositories
+ * Install docker-compose & GitHub repositories 
+
+   ```bash
+   apt install docker-compose
+   ```
+
+   ```bash
+   git clone https://github.com/its-a-feature/Mythic
+   ```
+
+* Navigate into the Mythic directory and install docker
+
+```bash
+./install_docker_ubuntu.sh
+```
+```bash
+systemctl restart docker
+```
+```bash
+./mythic-cli start
+```
+
+* I created a new firewall group for my Mythic server (MYDFIR-Mythic-Firewall-CAG) and added my Windows & Linux servers to the group.
+* I logged into my Mythic server from the web: https://173.199.123.188:7743
+
+  ![mythic](https://github.com/user-attachments/assets/143680b0-5ee5-4f81-bca3-6bc25468ea84)
+
+   
+  
+
 
 
 
