@@ -423,12 +423,17 @@ Saved this filtered view under the name **SSH Failed Activity**.
 event.code: 4625 and agent.name: MYDFIR-WIN-CAG
 ```
 
+![image](https://github.com/user-attachments/assets/49de88c6-13ff-4bda-a544-ebe678864533)
+
+
 
   * I created a new query that filters out RDP successful attempts with RDP logon types 10 and 7
 
 ```bash
 event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonType: 10) and agent.name: MYDFIR-WIN-CAG
 ```
+
+![image](https://github.com/user-attachments/assets/cf47e8bd-6e19-4bcf-aedc-fa07be158da3)
 
 
 
