@@ -210,7 +210,7 @@ In short: Elastic Agent = Delivery truck (data collector)  Fleet Server = Centra
 
 
 
-**Day 7** How to set up Fleet server & Elastic agent:
+**Day 7 How to set up Fleet server & Elastic agent**
 
 The objective for today is to install the elastic agent on the Windows server and enroll the Windows server into a fleet server
 
