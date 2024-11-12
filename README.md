@@ -435,10 +435,7 @@ event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonT
 
 ![image](https://github.com/user-attachments/assets/cf47e8bd-6e19-4bcf-aedc-fa07be158da3)
 
-
-
-
-
+**Watch the video link below as i go over the dashboard**
  https://github.com/user-attachments/assets/d7aeb4fa-f161-4de5-9513-d6a51b7c74ff
 
 
