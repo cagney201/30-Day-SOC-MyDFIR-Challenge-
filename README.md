@@ -484,7 +484,7 @@ systemctl restart docker
 ```
 
 * I created a new firewall group for my Mythic server (MYDFIR-Mythic-Firewall-CAG) and added my Windows & Linux servers to the group.
-* I logged into my Mythic server from the web: https://173.199.123.188:7743
+* I logged into my Mythic server from the web: https://173.199.123.188:7443
 
   ![mythic](https://github.com/user-attachments/assets/143680b0-5ee5-4f81-bca3-6bc25468ea84)
 
