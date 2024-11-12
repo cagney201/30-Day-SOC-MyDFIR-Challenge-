@@ -439,6 +439,14 @@ event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonT
 
 
 
+https://github.com/user-attachments/assets/05f2abce-f5c6-4dec-81a5-b41576068bf3
+
+
+
+
+
+
+
 
 
 
