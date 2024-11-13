@@ -679,6 +679,9 @@ download C:\Users\Administrator\Documents\passwords.txt
   event.code: "3" AND event.provider : "Microsoft-Windows-Sysmon" AND winlog.event_data.Initiated : "true"
   ```
 
+![image](https://github.com/user-attachments/assets/a9a2e506-057f-4b69-b702-8e9c0644d344)
+
+
    * Windows Defender Alerts:
  
  ```bash
@@ -686,6 +689,7 @@ download C:\Users\Administrator\Documents\passwords.txt
  ```
 
 
+![image](https://github.com/user-attachments/assets/1d8cc904-7f5e-4403-bfb2-026424dda2a9)
 
 
 
