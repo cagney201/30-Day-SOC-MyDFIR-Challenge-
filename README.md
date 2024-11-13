@@ -2,8 +2,7 @@
 
 **Day 1: Network Architecture Design for SOC Environment**
 
- I designed a network architecture diagram to set up a secure SOC environment for testing and monitoring. Using Draw.io, I created a visual layout that organizes the infrastructure into a cloud-based environment hosted on Vultr, with one on-premise machine for attack simulations.
-
+ I have designed a network architecture diagram for the purpose of establishing a secure Security Operations Center (SOC) environment for testing and monitoring. Utilizing Draw.io, I have created a visual representation that organizes the infrastructure into a cloud-based environment hosted on Vultr, with the Kali Linux machine hosted on-premise via VMware.
 
 
 
