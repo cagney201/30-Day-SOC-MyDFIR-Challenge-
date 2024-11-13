@@ -784,7 +784,7 @@ icacls .\ost-config.php /reset
 * Choose Webhook as the connector type.
 * Add the following settings below in the screenshot:
 
-   ![day 25 2](https://github.com/user-attachments/assets/924ede0b-2f13-45ac-aab1-98cf78d5f387)
+![day 25 2](https://github.com/user-attachments/assets/924ede0b-2f13-45ac-aab1-98cf78d5f387)
 
 
 
