@@ -761,6 +761,11 @@ An **IT ticketing system** is a software application used by organizations to ma
 icacls .\ost-config.php /reset
 ```
 
+* I successfully created my own ticketing system:
+
+  ![image](https://github.com/user-attachments/assets/9edc6f63-153c-46e7-8e76-d8ff28c6debe)
+
+
 
 
 
