@@ -578,11 +578,11 @@ Proceeded to install the http profile by executing the following command:
 
 ![image](https://github.com/user-attachments/assets/c489c8b1-21be-4fcb-b183-62dcd37652ac)
 
-*After installation, create a new Windows payload in Mythic.
-*Selected the WindowsExe package and included all necessary commands.
-*Chose the HTTP C2 Profile and set the Callback Host to HTTP://173.199.123.188
-*Finalized the setup and generated the payload.
-*Right-click the download file and select copy link address
+* After installation, create a new Windows payload in Mythic.
+* Selected the WindowsExe package and included all necessary commands.
+* Chose the HTTP C2 Profile and set the Callback Host to HTTP://173.199.123.188
+* Finalized the setup and generated the payload.
+* Right-click the download file and select copy link address
 
 
 Run the following command:
