@@ -721,6 +721,9 @@ An **IT ticketing system** is a software application used by organizations to ma
 
    ![image](https://github.com/user-attachments/assets/6192baad-682e-4e53-8eda-5bcd5c4e7dca)
 
+   ![day 24](https://github.com/user-attachments/assets/dcaa39af-a1a4-4f9e-ba32-cd83c72bfacb)
+
+
  * Navigated to the phpMyAdmin directory C:\xammp\phpMyAdmin\
  * Edited the config.inc.php
  * updating the localhost server to my public IP address, and saved the changes.
@@ -732,8 +735,31 @@ An **IT ticketing system** is a software application used by organizations to ma
 
 ![day 23 3](https://github.com/user-attachments/assets/f329cbcd-2fd0-45a1-9c65-57466cc4c90d)
 
-  
 
+
+**OSTIcket Install**
+
+ * Visit https://osticket.com/editions/ select open source and click download.
+ * Extracted the files and copied them to a new folder named OsTicket under C:\xampp\htdocs
+ * Opened a browser and navigated to (mypublicip/osticket/upload)
+ * OsTicket prompted me to rename the sample configuration file.
+ * Navigated to C:\xampp\htdocs\osticket\upload\include
+ * Renamed ost-sampleconfig.php to ost-config.php
+   
+
+ * In phpMyAdmin, created a new MySQL database named mydfir-30-day-db.
+ * Set the hostname to my public IP address
+
+  ![day 23 4png](https://github.com/user-attachments/assets/f9653146-7bcc-4b87-94a6-5f9f7d9b2339)
+
+
+ * Opened PowerShell with admin privileges.
+ * Navigated to C:\xampp\htdocs\osticket\upload\include.
+ * input this command:
+
+```bash
+icacls .\ost-config.php /reset
+```
 
 
 
