@@ -44,9 +44,10 @@ The Elastic stack known as the ELK stack has three core components that work to 
    Deploy now
 
 2. Installing Elastic Server
- * Open PowerShell and SSH into the server
+ 
+* Open PowerShell and SSH into the server
 
- * Let's update our repositories with the following command
+ * Let's update our repositories with the following   command
  
    ```powershell
    apt-get update && apt-get upgrade –y
