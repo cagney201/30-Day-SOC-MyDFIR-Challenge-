@@ -131,7 +131,10 @@ sudo systemctl status elasticsearch.service
 
 1. Download Kibana: https://www.elastic.co/downloads/kibana select DEBx86_64 and right click on the download button field and choose the copy link address
 
-2. Kibana Configuration: After downloading Kibana we need to edit the configuration file like Elastic. nano /etc/kibana/kibana.yml
+2. Kibana Configuration: After downloading Kibana we need to edit the configuration file like Elastic.
+   ```bash
+   nano /etc/kibana/kibana.yml
+   ```
     
     * Server Port: Default port for Kibana (5601)
     * Server Host: is set to the public IP address of my server
