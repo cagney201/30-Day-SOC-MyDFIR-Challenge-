@@ -693,7 +693,19 @@ download C:\Users\Administrator\Documents\passwords.txt
 
 
 
+**Day 23 What is a Ticketing System?**
 
+An **IT ticketing system** is a software application used by organizations to manage and track IT support requests, incidents, and service tasks. It organizes requests submitted by users, assigns them to appropriate support personnel, and tracks the status of each request until it is resolved. This centralized approach improves efficiency and ensures that issues are addressed promptly, enabling IT teams to prioritize, manage, and solve problems effectively. The system is typically used in help desks or service desks to handle inquiries related to technical support, equipment maintenance, network issues, and more.
+
+ **Popular Open Source Ticketing Systems:**
+
+  1. ServiceNow
+  2. Jira Service Management
+  3. osTicket
+
+**Day 24 osTicket Setup**
+
+  
 
 
 
