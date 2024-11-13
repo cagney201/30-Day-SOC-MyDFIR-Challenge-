@@ -766,6 +766,19 @@ icacls .\ost-config.php /reset
   ![image](https://github.com/user-attachments/assets/9edc6f63-153c-46e7-8e76-d8ff28c6debe)
 
 
+**Day 25 osTicket + ELK Integration**
+
+ * RDP into the server & changed the IP address on the nic card to the private address 
+ * Accessed OSTicket and opened the Agent Panel
+ * Under the Manage section, navigate to the API section and select Add New API Key
+ * Entered the private IP address (as both OSTicket and ELK were hosted on the same VPC).
+ * Enabled the Can Create Tickets option for the services.
+
+   ![image](https://github.com/user-attachments/assets/63601403-47ad-4326-844b-23c55964241f)
+
+   
+
+
 
 
 
