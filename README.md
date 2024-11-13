@@ -148,15 +148,16 @@ sudo systemctl status elasticsearch.service
 3. Enrollment Token: To connect Kibana to Elasticsearch I need to create an enrollment token.
 
     * Navigate to the bin directory of Elastic
-      ```bash
-      cd /usr/share/elasticsearch/bin
-      ```
-    * To generate a token use the following command:
-      ```bash
-      ./elasticsearch-create-enrollment-token --scope kibana
-      ```
 
-4. I had issues connecting to Kibana in my web browser, so I had to edit my firewall settings and allow any TCP ports from 1-65535 from my SOC analyst laptop
+    ```bash
+      cd /usr/share/elasticsearch/bin
+   ```
+    * To generate a token use the following command:
+   ```bash
+      ./elasticsearch-create-enrollment-token --scope kibana
+   ```
+
+5. I had issues connecting to Kibana in my web browser, so I had to edit my firewall settings and allow any TCP ports from 1-65535 from my SOC analyst laptop
      * I also needed to allow port 5601 on my ELK server as well by running this command
        ```bash
        ufw allow 5601
