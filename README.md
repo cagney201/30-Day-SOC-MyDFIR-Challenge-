@@ -705,6 +705,33 @@ An **IT ticketing system** is a software application used by organizations to ma
 
 **Day 24 osTicket Setup**
 
+ * Deploy a new server with Windows server 2022 image and connect it with our VPC network.
+ * Add the server to the 30-day-MYDFIR-SOC firewall group
+ * RDP into the server and download the XAMMP https://www.apachefriends.org/
+ * After installation Open phpMyAdmin and navigate to User Accounts.
+ * Selected the root username with localhost as the hostname
+ * Changed the hostname to my public IP address
+ * Updated the password to Winter2024!
+ * Returned to User Accounts in phpMyAdmin
+ * Updated the pma user to use my public IP address as the hostname
+ * Changed the password to Winter2024!
+ * I navigated to the installation directory. C:\Xammp\properties Right-click and select edit
+ * Change the pache_domainname to my public IP address.
+ * Save the file
+
+   ![image](https://github.com/user-attachments/assets/6192baad-682e-4e53-8eda-5bcd5c4e7dca)
+
+ * Navigated to the phpMyAdmin directory C:\xammp\phpMyAdmin\
+ * Edited the config.inc.php
+ * updating the localhost server to my public IP address, and saved the changes.
+ * Created new inbound firewall rules in Windows Defender Firewall to allow connections on ports 80 and 443
+
+ 
+ 
+ * Start the Apache & MySql services 
+
+![day 23 3](https://github.com/user-attachments/assets/f329cbcd-2fd0-45a1-9c65-57466cc4c90d)
+
   
 
 
