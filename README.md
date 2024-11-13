@@ -733,7 +733,7 @@ An **IT ticketing system** is a software application used by organizations to ma
  
  * Start the Apache & MySql services 
 
-![day 23 3](https://github.com/user-attachments/assets/f329cbcd-2fd0-45a1-9c65-57466cc4c90d)
+ ![day 23 3](https://github.com/user-attachments/assets/f329cbcd-2fd0-45a1-9c65-57466cc4c90d)
 
 
 
@@ -750,7 +750,7 @@ An **IT ticketing system** is a software application used by organizations to ma
  * In phpMyAdmin, created a new MySQL database named mydfir-30-day-db.
  * Set the hostname to my public IP address
 
-  ![day 23 4png](https://github.com/user-attachments/assets/f9653146-7bcc-4b87-94a6-5f9f7d9b2339)
+ ![day 23 4png](https://github.com/user-attachments/assets/f9653146-7bcc-4b87-94a6-5f9f7d9b2339)
 
 
  * Opened PowerShell with admin privileges.
@@ -763,7 +763,7 @@ icacls .\ost-config.php /reset
 
 * I successfully created my own ticketing system:
 
-  ![image](https://github.com/user-attachments/assets/9edc6f63-153c-46e7-8e76-d8ff28c6debe)
+![image](https://github.com/user-attachments/assets/9edc6f63-153c-46e7-8e76-d8ff28c6debe)
 
 
 **Day 25 osTicket + ELK Integration**
@@ -774,7 +774,20 @@ icacls .\ost-config.php /reset
  * Entered the private IP address (as both OSTicket and ELK were hosted on the same VPC).
  * Enabled the Can Create Tickets option for the services.
 
-   ![image](https://github.com/user-attachments/assets/63601403-47ad-4326-844b-23c55964241f)
+![image](https://github.com/user-attachments/assets/63601403-47ad-4326-844b-23c55964241f)
+
+
+* Opened Elastic and navigated to **Management** and select Stack Management
+* Navigated to the Alerts and Insights section
+* Selected Connectors
+* Since the default setup didn’t support API keys, I started a free 30-day subscription to Elastic
+* Choose Webhook as the connector type.
+* Add the following settings below in the screenshot:
+
+   ![day 25 2](https://github.com/user-attachments/assets/924ede0b-2f13-45ac-aab1-98cf78d5f387)
+
+
+
 
    
 
