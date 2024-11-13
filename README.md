@@ -664,6 +664,26 @@ download C:\Users\Administrator\Documents\passwords.txt
  * Severity: Critical
  * Frequency: Every 5 minutes with a 5-minute look-back window
 
+* Create a dashboard for alerts:
+
+   * Process Creation via PowerShell, CMD, or rundll32:
+ 
+  ```bash
+  event.code: "1" AND event.provider : "Microsoft-Windows-Sysmon" AND (powershell OR cmd OR rundll32)
+  ```
+![image](https://github.com/user-attachments/assets/8c781316-7511-41be-a125-5ccf094f1c64)
+
+   * Network Connection Initiation
+
+  ```bash
+  event.code: "3" AND event.provider : "Microsoft-Windows-Sysmon" AND winlog.event_data.Initiated : "true"
+  ```
+
+   * Windows Defender Alerts:
+ 
+ ```bash
+ event.code: "5001" AND event.provider : "Microsoft-Windows-Windows Defender"
+ ```
 
 
 
