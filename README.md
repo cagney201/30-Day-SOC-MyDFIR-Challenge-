@@ -839,6 +839,26 @@ Lets investigate and alert:
   
       ![day 26](https://github.com/user-attachments/assets/14740fd2-3b6f-48ea-92fb-ad97d22fb6af)
 
+
+   **Day 27 Investigate RDP Brute Force Attack**
+
+    * There were 225 alerts for RDP in the last 12 hours:
+
+      ![day 27 1](https://github.com/user-attachments/assets/d451b5de-a051-4e8a-adf8-4743c0e187a5)
+
+      * I invesitaged ip address 201.111.116.177 coming from Mexico that was rported only 3 times
+        
+      ![day 27 4](https://github.com/user-attachments/assets/5330bea9-d4cd-47d4-97d6-42fbb5ee57c1)
+
+
+      ![day 27 2](https://github.com/user-attachments/assets/518bf875-c09d-4eea-a9f6-6486c110b7f1)
+
+
+      * No other users were impacted & none of them were successful 
+
+
+
+
    
      
 
