@@ -792,6 +792,8 @@ icacls .\ost-config.php /reset
 ![day 25 2](https://github.com/user-attachments/assets/924ede0b-2f13-45ac-aab1-98cf78d5f387)
 
 * After setting up the configurtions I was able to see the new genetrated tickets in my que
+* I created an account for my frind George who also does IT & had him login with his own credintals.
+  
 
   ![SSH BrusteForce OS ticket Alert](https://github.com/user-attachments/assets/b7752c52-e877-40a7-a1ac-7a86870400e6)
 
