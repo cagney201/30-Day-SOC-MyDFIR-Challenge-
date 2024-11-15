@@ -827,6 +827,19 @@ Lets investigate and alert:
 
    * Was there any other users impacted? no the only accounnt was **root**
    * Any of them successful? No
+  
+   **How to set up SSH Brute Force Alerts to OSTicket system**
+
+    * Navigated to Security > Rules > Detection Rules (SIEM) and selected the SSH Brute Force Attempt rule.
+    * Edited the rule settings and added a Webhook action.
+    * The OSTicket integration was automatically displayed.
+    * Configured the action frequency to trigger for each alert per rule run.
+    * For the webhook body, used the XML Payload Example from OSTicket's GitHub: https://github.com/osTicket/osTicket/blob/develop/setup/doc/api/tickets.md 
+    * Removed unnecessary attachments and IP fields, keeping only the message field.
+  
+      ![day 26](https://github.com/user-attachments/assets/14740fd2-3b6f-48ea-92fb-ad97d22fb6af)
+
+   
      
 
 
