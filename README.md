@@ -798,7 +798,36 @@ icacls .\ost-config.php /reset
   ![SSH BrusteForce OS ticket Alert](https://github.com/user-attachments/assets/b7752c52-e877-40a7-a1ac-7a86870400e6)
 
 
+**Day 26 Investigate SSH Brute Force Attack**
 
+* Accessed Elastic.
+* Navigated to the Security section and selected Alerts.
+* Discovered 1k alerts in the past 24 hours related to potential brute force attacks
+
+![Screenshot 2024-11-12 185124](https://github.com/user-attachments/assets/0ed7ba68-a01f-452c-9c4d-747a50ab93dc)
+
+
+
+**Top 3 questions we need to ask ourselves?**
+
+ 1. Is the IP known for performing brute force activities?
+ 2. Are any other users affected by this IP?
+ 3. Were any of the brute force attempts successful?
+
+
+Lets investigate and alert:
+ 
+ * I searched IP address 218.92.0.134 & has been reported 709 times on AbuseIPDB website.
+
+   ![Screenshot 2024-11-13 153548](https://github.com/user-attachments/assets/9cddb8c2-c7f1-4b8f-b630-c334cbeac3f3)
+
+ * I also checked on greynoise and the reults came back as malicious with the tags indicating a SSH Bruteforce
+
+   ![image](https://github.com/user-attachments/assets/9b857138-d291-4c1d-ae5d-3cab8eec6177)
+
+   * Was there any other users impacted? no the only accounnt was **root**
+   * Any of them successful? No
+     
 
 
    
