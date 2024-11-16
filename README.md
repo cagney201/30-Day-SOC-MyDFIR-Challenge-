@@ -298,16 +298,6 @@ Use Cases in Cybersecurity:
 Sysmon is commonly deployed in SOC (Security Operations Center) environments to enhance visibility into system activities and provide critical insights for identifying unusual behavior. By combining Sysmon logs with SIEM (Security Information and Event Management) tools, analysts can detect suspicious patterns like unauthorized logins, process injections, or data exfiltration attempts.
 
 
-Additional Sysmon Event Types:
-
-- **Event ID 6**: Monitors driver loading, which helps detect potentially malicious drivers that might be loaded onto the system.
-- **Event ID 7**: Logs image loading, showing the libraries and DLLs that processes are loading, which aids in tracking potential malware components.
-- **Event ID 8**: Detects remote thread creation, a method often used in malicious code injection attacks, signaling possible unauthorized code execution.
-- **Event ID 10**: Monitors process access, logging when one process interacts with another—often an indicator of malicious activity like privilege escalation.
-- **Event ID 22**: Captures DNS queries, providing insight into unusual domain lookups that may indicate command-and-control (C2) activity, useful for detecting malware or phishing-related threats.
-  
-
-
 **Sysmon Installation**
 
 * RDP into my Windows server MYDFIR-WIN-CAG
