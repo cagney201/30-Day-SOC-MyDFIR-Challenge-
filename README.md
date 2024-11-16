@@ -821,7 +821,7 @@ Lets investigate and alert:
 
    ![Screenshot 2024-11-13 153548](https://github.com/user-attachments/assets/9cddb8c2-c7f1-4b8f-b630-c334cbeac3f3)
 
- * I also checked on greynoise and the reults came back as malicious with the tags indicating a SSH Bruteforce
+ * I also checked on greynoise and the results came back as malicious with the tags indicating a SSH Bruteforce
 
    ![image](https://github.com/user-attachments/assets/9b857138-d291-4c1d-ae5d-3cab8eec6177)
 
@@ -846,7 +846,7 @@ Lets investigate and alert:
 
       ![day 27 1](https://github.com/user-attachments/assets/d451b5de-a051-4e8a-adf8-4743c0e187a5)
 
-      * I invesitaged ip address 201.111.116.177 coming from Mexico that was rported only 3 times
+      * I invesitaged IP address 201.111.116.177 coming from Mexico that was rported only 3 times
         
       ![day 27 4](https://github.com/user-attachments/assets/5330bea9-d4cd-47d4-97d6-42fbb5ee57c1)
 
@@ -854,7 +854,7 @@ Lets investigate and alert:
       ![day 27 2](https://github.com/user-attachments/assets/518bf875-c09d-4eea-a9f6-6486c110b7f1)
 
 
-      * No other users were impacted & none of them were successful 
+      * No other users were impacted & no logins were successful 
 
 
 
