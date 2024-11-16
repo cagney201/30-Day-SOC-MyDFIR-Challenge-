@@ -1,6 +1,6 @@
 **30-Days SOC Challenge**
 
-*In this project I will be learning the following:**
+**In this project I will be learning the following:**
 
 1. How to spin up your own Elasticsearch & Kibana instance
 
