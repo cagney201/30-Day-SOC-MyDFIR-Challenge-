@@ -4,6 +4,22 @@
 
  I have designed a network architecture diagram for the purpose of establishing a Security Operations Center (SOC) environment for testing and monitoring.  I have created a visual representation that organizes the infrastructure into a cloud-based environment hosted on Vultr, with the Kali Linux machine hosted on-premise via VMware.
 
+ **In this project I will be learning the following:**
+
+1. How to spin up your own Elasticsearch & Kibana instance
+
+2. Spin up a Windows & Linux Server
+
+3. Ingest logs into your Elasticsearch instance
+
+4. Create alerts & dashboards
+
+5. Learn about brute force & command & control
+
+6. Spin up your own command & control server
+
+7. Configure & integrate your own ticketing system
+
 
 
 ![image](https://github.com/user-attachments/assets/48f2eddb-f650-4c51-bcc7-d2306bce9a39)
@@ -854,7 +870,53 @@ Lets investigate and alert:
       ![day 27 2](https://github.com/user-attachments/assets/518bf875-c09d-4eea-a9f6-6486c110b7f1)
 
 
-      * No other users were impacted & no logins were successful 
+      * No other users were impacted & no logins were successful
+     
+      **Day 28 Investigate Mythic Agent**
+
+      * Opened Elastic and clicked on Discover, setting the calendar to the last 30 days
+      * Filtered by apollo.exe, knowing it was the name of my C2 agent.
+      * If the agent's name was unknown, the following methods would have been used
+
+         **Network Telemetry:**
+         * A C2 session would generate significant traffic, including multiple file transfers.
+         * Tools like RITA can detect C2 traffic patterns.
+       
+         **Process and Network Creations:**
+
+         * Used Sysmon to log network connections as event ID 3.
+         * Investigated suspicious processes like rundll32.exe, a common malware indicator.
+       
+          **Accessed the Mythic Suspicious Activities dashboard**
+        * Identified a suspicious executable.
+        * Observed it attempting to establish a network connection.
+        * Connection originated from the Downloads folder.
+        * Used port 80 for the connection.
+
+
+
+
+![image](https://github.com/user-attachments/assets/7ae4cdfd-e0f9-4a38-b09c-cac3309c6c05)
+
+
+
+**Day 29-30: Elastic Defend Setup**
+
+Elastic has an EDR solution called Elastic Defend.
+
+ * Navigated to Integrations under Management in Elastic
+ * Selected Elastic Defend and named the integration.
+ * Applied the integration to the Windows Server's policy.
+ * Saved and deployed the changes.
+ * Went to Manage under Security and clicked on Endpoints.
+ * Confirmed the Windows Server running Elastic Defend appeared in the list.
+
+
+![day 29](https://github.com/user-attachments/assets/49ab2170-4845-4df7-aae3-94b165cb78a9)
+
+   
+
+      
 
 
 
