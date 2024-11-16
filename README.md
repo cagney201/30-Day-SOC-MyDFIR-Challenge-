@@ -335,6 +335,7 @@ Sysmon is commonly deployed in SOC (Security Operations Center) environments to 
  * Restart the Elastic Agent service on the Windows Server.
  * After making these configurations, Sysmon logs successfully appeared in Elasticsearch
 
+![day10 3](https://github.com/user-attachments/assets/88cc0fa1-5a52-4974-bde3-5a33ceff2429)
 
 
 
