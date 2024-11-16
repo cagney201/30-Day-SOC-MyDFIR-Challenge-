@@ -1,10 +1,6 @@
-30-Days SOC Challenge
+**30-Days SOC Challenge**
 
-**Day 1: Network Architecture Design for SOC Environment**
-
- I have designed a network architecture diagram for the purpose of establishing a Security Operations Center (SOC) environment for testing and monitoring.  I have created a visual representation that organizes the infrastructure into a cloud-based environment hosted on Vultr, with the Kali Linux machine hosted on-premise via VMware.
-
- **In this project I will be learning the following:**
+*In this project I will be learning the following:**
 
 1. How to spin up your own Elasticsearch & Kibana instance
 
@@ -21,6 +17,15 @@
 7. Configure & integrate your own ticketing system
 
 
+
+
+
+
+**Day 1: Network Architecture Design for SOC Environment**
+
+ I have designed a network architecture diagram for the purpose of establishing a Security Operations Center (SOC) environment for testing and monitoring.  I have created a visual representation that organizes the infrastructure into a cloud-based environment hosted on Vultr, with the Kali Linux machine hosted on-premise via VMware.
+
+ 
 
 ![image](https://github.com/user-attachments/assets/48f2eddb-f650-4c51-bcc7-d2306bce9a39)
 
