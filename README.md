@@ -456,6 +456,18 @@ event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonT
 **Watch the video link below as i go over the dashboard**
  https://github.com/user-attachments/assets/d7aeb4fa-f161-4de5-9513-d6a51b7c74ff
 
+ ### Bounus
+
+ This wasn't originally part of the project, but I thought it was important to add a query to display information about my Windows server's restart and shutdown events on the dashboard
+
+ I tested the query and it works! 
+
+ ```bash
+eventcode : (6006 or 1074 or 41) and agent.name : "MYDFIR-WIN-CAG"
+```
+
+ ![bounus](https://github.com/user-attachments/assets/f110e7e6-0c97-410a-aac2-92dbbc04454e)
+
 
 
 
