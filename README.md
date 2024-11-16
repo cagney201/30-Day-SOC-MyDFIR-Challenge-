@@ -1,4 +1,4 @@
-**30-Days SOC Challenge**
+**30 Day SOC Challenge**
 
 **In this project I will be learning the following:**
 
