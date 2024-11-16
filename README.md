@@ -21,7 +21,7 @@
 
 
 
-**Day 1: Network Architecture Design for SOC Environment**
+### **Day 1: Network Architecture Design for SOC Environment**
 
  I have designed a network architecture diagram for the purpose of establishing a Security Operations Center (SOC) environment for testing and monitoring.  I have created a visual representation that organizes the infrastructure into a cloud-based environment hosted on Vultr, with the Kali Linux machine hosted on-premise via VMware.
 
@@ -43,7 +43,7 @@ The SOC environment comprises six servers, each serving distinct purposes, all h
 * Attacker Machine: Location: On-premise desktop setup in my home. Simulates an attacker’s machine to test the SOC’s defenses
 
 
-**Day 2: Elastic Stack**
+### **Day 2: Elastic Stack**
 
 The Elastic stack known as the ELK stack has three core components that work to ingest, process, store, and visualize our data.
 
@@ -56,7 +56,7 @@ The Elastic stack known as the ELK stack has three core components that work to 
 * Kibana: Serves as the Web Gui, you can quickly search data, Create visualization, create Reports, create alerts, and build dashboards.
 
 
-**Day 3-4: Setup Elastic & Kibana Server**
+### **Day 3-4: Setup Elastic & Kibana Server**
 
 1. Vultr settings 
  * Login to the Vutur website navigate to the network option select VPC 2.0 & use the 172.31.0.0/24 for our private network
@@ -185,7 +185,7 @@ sudo systemctl status elasticsearch.service
        ```
 
 
-**Day 5 Windows Server 2022 (RDP) install**
+### **Day 5 Windows Server 2022 (RDP) install**
 
   * Started by deploying a new server with the "Cloud Compute - Shared CPU" configuration.
   * Selected the same data center location as my Elastic server.
@@ -197,7 +197,7 @@ sudo systemctl status elasticsearch.service
 ![image](https://github.com/user-attachments/assets/440fa212-dc92-4a0e-acbc-00ab5d9c5851)
 
 
-**Day 6 Fleet Server**
+### **Day 6 Fleet Server**
 
 
 Elastic Agent
@@ -237,7 +237,7 @@ In short: Elastic Agent = Delivery truck (data collector)  Fleet Server = Centra
 
 
 
-**Day 7 How to set up Fleet server & Elastic agent**
+### **Day 7 How to set up Fleet server & Elastic agent**
 
 The objective for today is to install the elastic agent on the Windows server and enroll the Windows server into a fleet server
 
@@ -285,7 +285,7 @@ The objective for today is to install the elastic agent on the Windows server an
 
 
 
-**Day 8-9 Sysmom**
+### **Day 8-9 Sysmom**
 
 
 Sysmon, or System Monitor, is a Windows system service and driver that is part of the Sysinternals suite by Microsoft. Sysmon enhances the ability to monitor and log detailed system activity on a Windows machine, which is especially useful for threat detection, security incident response, and forensic investigations.
@@ -346,7 +346,7 @@ Sysmon is commonly deployed in SOC (Security Operations Center) environments to 
 
 
 
-**Day 11: Brute Force Attack**
+### **Day 11: Brute Force Attack**
 
 
 What is a brute force attack?
@@ -359,7 +359,7 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
 ![image](https://github.com/user-attachments/assets/04d595ee-ee6e-4c91-8731-7e5e553a6e24)
 
 
-**Day 12 Ubuntu Server SSH enable installation**
+### **Day 12 Ubuntu Server SSH enable installation**
 
   * Deploy New Server
   * Select **cloud compute-shared CPU**
@@ -388,7 +388,7 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
    
     
 
-**Day 13 Install Elastic Agent on Linux Ubuntu SSH Server**
+### **Day 13 Install Elastic Agent on Linux Ubuntu SSH Server**
 
  * I created a Fleet Server policy (MYDFIR-LINUX-POLICY-CAG) for my Ubuntu Server & installed the Elastic agent on it.
 
@@ -396,7 +396,7 @@ Brute force attacks, used by hackers to gain unauthorized access and compromise 
 
 
 
-**Day 14: Creating Alerts and Dashboard in Kibana**
+### **Day 14: Creating Alerts and Dashboard in Kibana**
 
  * Accessed Elastic and navigated to the Discover section.
  * A filter was applied to display results exclusively for the Ubuntu server agent.
@@ -422,7 +422,7 @@ Saved this filtered view under the name **SSH Failed Activity**.
    ![image](https://github.com/user-attachments/assets/a838a962-0198-4b29-adc4-34663707b5f5)
 
 
-**Day 15,16,17 Creating Alerts for Windows Server RDP**
+### **Day 15,16,17 Creating Alerts for Windows Server RDP**
 
  * Began by navigating to Elastic's "Discover" section.
  * Selected agent.name and applied a filter specific to my Windows Server.
@@ -458,7 +458,7 @@ event.code: 4624 and (winlog.event_data.LogonType: 7 or winlog.event_data.LogonT
 
 
 
-**Day 18 Command and Control (C2)**
+### **Day 18 Command and Control (C2)**
 
 
 In cybersecurity, Command and Control (C2), sometimes written as C&C, refers to a system or infrastructure used by threat actors to remotely control compromised systems within a network. Through C2 channels, attackers can issue commands to infected devices (often called bots or zombies), exfiltrate data, and manage malware. These C2 communications are essential for orchestrating attacks and enabling persistence within the target's environment. C2 servers are typically used in botnet attacks, ransomware campaigns, and advanced persistent threat (APT) operations, allowing attackers to manage and coordinate malicious activities covertly.
@@ -468,7 +468,7 @@ In cybersecurity, Command and Control (C2), sometimes written as C&C, refers to 
 
 
 
-**Day 20 Mythic Server Setup**
+### **Day 20 Mythic Server Setup**
 
  * On VULTR, I began by deploying a new server, selecting the "Cloud Compute - Shared CPU" option.
  * For the operating system, I chose Ubuntu 22.04, which is recommended for running Mythic.
@@ -504,7 +504,7 @@ systemctl restart docker
 
 
 
-**Day 21 Mythic Agent Setup**
+### **Day 21 Mythic Agent Setup**
 
 * Created a text file named passwords in the Documents folder on my Windows Sever.
 * In the test file I entered a password: **F@all2024!**
@@ -641,7 +641,7 @@ download C:\Users\Administrator\Documents\passwords.txt
 ![image](https://github.com/user-attachments/assets/ab7952f7-1c3d-4fd1-bc8e-f087852c8bf2)
 
 
-**Day 22 How To Create Alerts and Dashboards in Kibana**
+### **Day 22 How To Create Alerts and Dashboards in Kibana**
 
 
 * Started by searching for the Mythic executable named apollo.exe in Elastic (this is the agent file name I deployed).
@@ -709,7 +709,7 @@ download C:\Users\Administrator\Documents\passwords.txt
 
 
 
-**Day 23 What is a Ticketing System?**
+### **Day 23 What is a Ticketing System?**
 
 An **IT ticketing system** is a software application used by organizations to manage and track IT support requests, incidents, and service tasks. It organizes requests submitted by users, assigns them to appropriate support personnel, and tracks the status of each request until it is resolved. This centralized approach improves efficiency and ensures that issues are addressed promptly, enabling IT teams to prioritize, manage, and solve problems effectively. The system is typically used in help desks or service desks to handle inquiries related to technical support, equipment maintenance, network issues, and more.
 
@@ -719,7 +719,7 @@ An **IT ticketing system** is a software application used by organizations to ma
   2. Jira Service Management
   3. osTicket
 
-**Day 24 osTicket Setup**
+### **Day 24 osTicket Setup**
 
  * Deploy a new server with Windows server 2022 image and connect it with our VPC network.
  * Add the server to the 30-day-MYDFIR-SOC firewall group
@@ -782,7 +782,7 @@ icacls .\ost-config.php /reset
 ![image](https://github.com/user-attachments/assets/9edc6f63-153c-46e7-8e76-d8ff28c6debe)
 
 
-**Day 25 osTicket + ELK Integration**
+### **Day 25 osTicket + ELK Integration**
 
  * RDP into the server & changed the IP address on the nic card to the private address 
  * Accessed OSTicket and opened the Agent Panel
@@ -809,7 +809,7 @@ icacls .\ost-config.php /reset
   ![SSH BrusteForce OS ticket Alert](https://github.com/user-attachments/assets/b7752c52-e877-40a7-a1ac-7a86870400e6)
 
 
-**Day 26 Investigate SSH Brute Force Attack**
+### **Day 26 Investigate SSH Brute Force Attack**
 
 * Accessed Elastic.
 * Navigated to the Security section and selected Alerts.
@@ -851,9 +851,10 @@ Lets investigate and alert:
       ![day 26](https://github.com/user-attachments/assets/14740fd2-3b6f-48ea-92fb-ad97d22fb6af)
 
 
-   **Day 27 Investigate RDP Brute Force Attack**
+   ### **Day 27 Investigate RDP Brute Force Attack**
 
-    * There were 225 alerts for RDP in the last 12 hours:
+
+   * There were 225 alerts for RDP in the last 12 hours:
 
       ![day 27 1](https://github.com/user-attachments/assets/d451b5de-a051-4e8a-adf8-4743c0e187a5)
 
@@ -867,7 +868,7 @@ Lets investigate and alert:
 
       * No other users were impacted & no logins were successful
      
-      **Day 28 Investigate Mythic Agent**
+   ### **Day 28 Investigate Mythic Agent**
 
       * Opened Elastic and clicked on Discover, setting the calendar to the last 30 days
       * Filtered by apollo.exe, knowing it was the name of my C2 agent.
@@ -895,7 +896,7 @@ Lets investigate and alert:
 
 
 
-**Day 29-30: Elastic Defend Setup**
+### **Day 29-30: Elastic Defend Setup**
 
 Elastic has an EDR solution called Elastic Defend.
 
