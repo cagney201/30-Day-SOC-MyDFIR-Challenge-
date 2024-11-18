@@ -479,6 +479,43 @@ In cybersecurity, Command and Control (C2), sometimes written as C&C, refers to 
 
 **Day 19 How to Create an Attack Diagram**
 
+   **Phase 1: Initial Access**
+   During this phase, we will conduct a brute force attack on the Windows Server to gain successful authentication.
+
+   **Phase 2: Discovery**
+    In this phase, we will run discovery commands like whoami, ipconfig, net user, and net group to collect information about the system and its user accounts.
+
+   ![image](https://github.com/user-attachments/assets/d78d86f7-231a-40ed-b168-96b4e4075e78)
+
+
+
+   **Phase 3: Defense Evasion**
+    After establishing an RDP session, we will disable Windows Defender on the Windows Server to prevent detection during the next steps of our operation.
+
+   **Phase 4: Execution**
+     In this phase, we will utilize PowerShell commands to download the Mythic Agent onto our C2 server. 
+
+
+   ![image](https://github.com/user-attachments/assets/abdc38c0-05b1-4122-8149-6a2613fdf3f4)
+
+
+   **Phase 5: Command & Control (C2)**
+     We will establish a communication link between the compromised Windows Server and our C2 server, enabling command execution and data exchange.
+
+   **Phase 6: Exfiltration**
+     We will use the C2 server to download the passwords file from the Windows Server.
+
+   
+   ![image](https://github.com/user-attachments/assets/fa02a002-b1c2-40ab-a8bf-185659ffc6b4)
+
+    
+
+   
+
+
+
+
+
 
 
 ### **Day 20 Mythic Server Setup**
